@@ -19,7 +19,10 @@ use App\Http\Controllers\Admin\BookController;
 
 // Route::METODO(PERCORSO CON CUI ARRIVARE ALLA PAGINA, FUNZIONE DI CALLBACK CHE MI CREA LA RISPOSTA DA DARE ALL UTENTE)
 
-Route::get('/', [MainController::class, 'index'])->name('home');   // <--- Che vantaggi ho nominando le rotte?
+  // <--- Che vantaggi ho nominando le rotte?
+
+Route::get
+('/home', [MainController::class, 'index'])->name('home'); 
 
 Route::get('/chi-siamo', [MainController::class, 'about'])->name('about');
 
@@ -34,3 +37,19 @@ Route::get('/chi-siamo', [MainController::class, 'about'])->name('about');
     - GET       /books/{book}/edit      -> books.edit
 */
 Route::resource('books', BookController::class);
+
+
+Route::get('programma', function () {
+    return view('programma');
+})->name('programma');
+
+
+Route::get('/contatti', function () {
+    return view('contatti'); // contatti.blade.php in resources/views/
+})->name('contatti');
+
+
+
+Route::get('location', function () {
+    return view('location');
+})->name('location');

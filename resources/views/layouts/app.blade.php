@@ -6,6 +6,9 @@
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <title>@yield('page-title') | Laravel Start 1</title>
 
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+
+
         {{-- Stili nell'head --}}
         <link rel="stylesheet" href="css/style.css">
 
@@ -19,7 +22,7 @@
         @include('partials.header')
 
         <main>
-            <div class="container">
+            <div class="">
 
                 <div class="row">
 
